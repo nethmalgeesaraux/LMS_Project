@@ -24,7 +24,7 @@ const Hero = () => {
                 <div className="col-md-8 text-white">
                     <h1 className="display-3 fw-bold mb-4">Learn Anytime, Anywhere</h1>
                     <p className="lead mb-4">Join our Learning Management System and explore a wide range of courses to enhance your skills and achieve your goals.</p>
-                    <a href="/courses" className="btn btn-light btn-lg px-5 py-3 fw-bold rounded-pill">Explore Courses</a>
+                    <a href="/courses" className="btn btn-light btn-lg px-5 py-3 custom-btn-primary fw-bold rounded-pill">Explore Courses</a>
                 </div>
             </div>            
         </div>
