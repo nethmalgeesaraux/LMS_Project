@@ -32,11 +32,53 @@ const Course = ({ title, level, enrolled, customClasses }) => {
                     <div className="d-flex justify-content-between align-items-center">
                         <div className="price fw-bold fs-4 text-dark">$50</div>
                         <div className="add-to-cart">
-                            <a href="/detail" className="btn course-btn text-white px-4 py-2" style={{ fontWeight: '500' }}>Explore</a>
+                            <a href="/detail" className="btn course-btn text-white px-4 py-2" style={{ fontWeight: '500' }}>Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
+            <style dangerouslySetInnerHTML={{__html: `
+                .course-card {
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+                    background-color: #fff;
+                }
+                .course-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 20px 40px rgba(29, 165, 153, 0.12);
+                }
+                .course-title {
+                    transition: color 0.3s ease;
+                }
+                .course-card:hover .course-title {
+                    color: #1da599 !important;
+                }
+                .course-image-wrapper {
+                    overflow: hidden;
+                }
+                .course-image {
+                    transition: transform 0.5s ease;
+                }
+                .course-card:hover .course-image {
+                    transform: scale(1.05);
+                }
+                .course-btn {
+                    background-color: #1da599;
+                    border-color: #1da599;
+                    transition: all 0.3s ease;
+                    border-radius: 8px;
+                }
+                .course-btn:hover {
+                    background-color: #15857b;
+                    border-color: #15857b;
+                    transform: translateY(-2px);
+                }
+                .meta-icon {
+                    color: #1da599;
+                }
+                .rating-icon {
+                    color: #f1c40f;
+                }
+            `}} />
         </div>
     )
 }

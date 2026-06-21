@@ -64,50 +64,12 @@ const FeaturedCourses = () => {
                         customClasses="col-lg-3 col-md-6"
                     />   
                 </div>
+                <div className="text-center mt-5">
+                    <a href="/courses" className="btn course-btn text-white px-5 py-3 rounded-pill fw-bold" style={{ fontSize: '1.05rem', boxShadow: '0 10px 20px rgba(29, 165, 153, 0.2)' }}>
+                        View All Courses
+                    </a>
+                </div>
             </div>
-
-            <style dangerouslySetInnerHTML={{__html: `
-                .course-card {
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-                    background-color: #fff;
-                }
-                .course-card:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 20px 40px rgba(29, 165, 153, 0.12);
-                }
-                .course-title {
-                    transition: color 0.3s ease;
-                }
-                .course-card:hover .course-title {
-                    color: #1da599 !important;
-                }
-                .course-image-wrapper {
-                    overflow: hidden;
-                }
-                .course-image {
-                    transition: transform 0.5s ease;
-                }
-                .course-card:hover .course-image {
-                    transform: scale(1.05);
-                }
-                .course-btn {
-                    background-color: #1da599;
-                    border-color: #1da599;
-                    transition: all 0.3s ease;
-                    border-radius: 8px;
-                }
-                .course-btn:hover {
-                    background-color: #15857b;
-                    border-color: #15857b;
-                    transform: translateY(-2px);
-                }
-                .meta-icon {
-                    color: #1da599;
-                }
-                .rating-icon {
-                    color: #f1c40f;
-                }
-            `}} />
         </section>
     )
 }
