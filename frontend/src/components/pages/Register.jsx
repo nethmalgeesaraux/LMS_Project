@@ -4,8 +4,12 @@ import Layout from '../common/Layout'
 import { Icon } from '@iconify/react'
 import { useForm } from 'react-hook-form'
 import { apiUrl } from '../common/Config'
+import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 const Register = () => {
+
+    const navigate = useNavigate();
 
     const {
         handleSubmit, register, formState: { errors }, setError
@@ -24,7 +28,8 @@ const Register = () => {
             .then(result => {
                 console.log(result)
                 if (result.status === 200) {
-                    // success
+                    toast.success(result.message);
+                    navigate('/account/login');
                 } else {
                     const errors = result.errors;
                     Object.keys(errors).forEach(field => {
