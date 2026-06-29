@@ -64,7 +64,8 @@ class AccountController extends Controller
                 'status' => 200,
                 'token' => $token,
                 'name' => $user->name,
-                'id' => $user->id
+                'id' => $user->id,
+                'message' => 'Login successfully.'
             ], 200);
         } else {
             return response()->json([
