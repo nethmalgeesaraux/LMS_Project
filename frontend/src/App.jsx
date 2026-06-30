@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
 import Home from './components/pages/Home'
 import Courses from './components/pages/Courses'
 import Register from './components/pages/Register'
@@ -9,7 +10,8 @@ import MyLearning from './components/pages/account/MyLearning'
 import MyCourses from './components/pages/account/MyCourses'
 import WatchCourse from './components/pages/account/WatchCourse'
 import ChangePassword from './components/pages/account/ChangePassword'
-import {Toaster} from 'react-hot-toast'
+import Dashboard from './components/pages/account/Dashboard'
+import { RequireAuth } from './components/common/RequireAuth'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +29,13 @@ function App() {
           <Route path='/account/my-learning' element={<MyLearning />} />
           <Route path='/account/watch-course' element={<WatchCourse />} />
           <Route path='/account/change-password' element={<ChangePassword />} />
+
+          <Route path="/account/dashboard" element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          } />
+
         </Routes>
       </BrowserRouter>
       <Toaster
