@@ -13,6 +13,7 @@ import ChangePassword from './components/pages/account/ChangePassword'
 import Dashboard from './components/pages/account/Dashboard'
 import { RequireAuth } from './components/common/RequireAuth'
 import CreateCourses from './components/pages/account/Courses/CreateCourses'
+import EditCourses from './components/pages/account/Courses/EditCourses'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -40,6 +41,13 @@ function App() {
           <Route path="/account/courses/createcourse" element={
             <RequireAuth>
               <CreateCourses />
+            </RequireAuth>
+          } />
+
+
+          <Route path="/account/courses/edit/:id" element={
+            <RequireAuth>
+              <EditCourses />
             </RequireAuth>
           } />
 
