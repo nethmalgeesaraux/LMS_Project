@@ -70,7 +70,7 @@ class AccountController extends Controller
         } else {
             return response()->json([
                 'status' => 401,
-                'message' => 'Either email/password is incorrect.'
+                'message' => 'email or password is incorrect.'
             ], 401);
         }
     }
